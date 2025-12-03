@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Tools Comparison</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>AI Tools Comparison</h1>
+    <p class="subtitle">
+        A simple guide to help you choose between popular AI tools for text, code, and more.
+    </p>
+</header>
+
+<main>
+    <!-- Tools section -->
+    <section class="tools-section">
+        <h2>Popular AI Tools</h2>
+
+        <div class="cards-container">
+            <!-- ChatGPT -->
+            <a href="https://chatgpt.com" target="_blank" class="tool-link">
+                <article class="tool-card">
+                    <h3>ChatGPT</h3>
+                    <p class="tagline">General-purpose conversational AI</p>
+                    <ul>
+                        <li><strong>Best for:</strong> Text, explanations, brainstorming, writing.</li>
+                        <li><strong>Strengths:</strong> Natural conversation, multi-language, flexible.</li>
+                        <li><strong>Limitations:</strong> No direct IDE integration, needs good prompts.</li>
+                    </ul>
+                </article>
+            </a>
+
+            <!-- GitHub Copilot -->
+            <a href="https://github.com/features/copilot" target="_blank" class="tool-link">
+                <article class="tool-card">
+                    <h3>GitHub Copilot</h3>
+                    <p class="tagline">AI pair programmer inside your IDE</p>
+                    <ul>
+                        <li><strong>Best for:</strong> Code completion, boilerplate, refactoring.</li>
+                        <li><strong>Strengths:</strong> Works directly in VS Code / IDE, fast suggestions.</li>
+                        <li><strong>Limitations:</strong> Less good for long explanations or reports.</li>
+                    </ul>
+                </article>
+            </a>
+
+            <!-- Gemini -->
+            <a href="https://gemini.google.com" target="_blank" class="tool-link">
+                <article class="tool-card">
+                    <h3>Gemini</h3>
+                    <p class="tagline">Google’s multimodal AI assistant</p>
+                    <ul>
+                        <li><strong>Best for:</strong> Text, images, search‑integrated tasks.</li>
+                        <li><strong>Strengths:</strong> Good connection with Google ecosystem.</li>
+                        <li><strong>Limitations:</strong> Interface and features still changing.</li>
+                    </ul>
+                </article>
+            </a>
+
+            <!-- Cursor -->
+            <a href="https://cursor.com" target="_blank" class="tool-link">
+                <article class="tool-card">
+                    <h3>Cursor</h3>
+                    <p class="tagline">AI‑focused code editor</p>
+                    <ul>
+                        <li><strong>Best for:</strong> Full‑file code edits, refactor, debugging.</li>
+                        <li><strong>Strengths:</strong> Strong for understanding and rewriting codebases.</li>
+                        <li><strong>Limitations:</strong> Mostly for developers, less for general users.</li>
+                    </ul>
+                </article>
+            </a>
+
+            <!-- Grok -->
+            <a href="https://grok.com" target="_blank" class="tool-link">
+                <article class="tool-card">
+                    <h3>Grok</h3>
+                    <p class="tagline">Fast assistant with internet access</p>
+                    <ul>
+                        <li><strong>Best for:</strong> Quick answers, meme‑style explanations, live info.</li>
+                        <li><strong>Strengths:</strong> Internet‑connected, playful style.</li>
+                        <li><strong>Limitations:</strong> Not as focused on deep code features as Copilot/Cursor.</li>
+                    </ul>
+                </article>
+            </a>
+        </div>
+    </section>
+
+    <!-- Quiz section -->
+    <section class="quiz-section">
+        <h2>Which AI tool should I use?</h2>
+        <p>Answer a few quick questions and get a suggestion.</p>
+
+        <form id="quiz-form">
+            <label for="main-goal">1. What is your main goal?</label>
+            <select id="main-goal" required>
+                <option value="">-- Choose an option --</option>
+                <option value="study">Study / explanations / homework help</option>
+                <option value="write">Writing emails / essays / content</option>
+                <option value="code">Writing or completing code</option>
+                <option value="debug">Understanding or debugging an existing project</option>
+                <option value="search">Searching the web / live information</option>
+            </select>
+
+            <label for="experience">2. Your programming experience:</label>
+            <select id="experience" required>
+                <option value="">-- Choose an option --</option>
+                <option value="beginner">Beginner / almost no coding</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced / professional</option>
+            </select>
+
+            <button type="submit">Get Recommendation</button>
+        </form>
+
+        <div id="result" class="result-box hidden">
+            <h3>Suggested Tool:</h3>
+            <p id="tool-name"></p>
+            <p id="tool-explanation"></p>
+        </div>
+    </section>
+
+    <!-- Suggestions section -->
+    <section class="suggestions-section">
+        <h2>Recommend an AI Tool</h2>
+        <p>If you know of another AI tool we should include, let us know!</p>
+        <form id="suggestion-form">
+            <input type="text" id="suggestion-input" placeholder="Enter AI tool suggestion" required>
+            <button type="submit">Submit</button>
+        </form>
+        <ul id="suggestions-list">
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>Created for AI course homework – using AI tools as assistants.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
